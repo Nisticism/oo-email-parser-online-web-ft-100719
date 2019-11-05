@@ -14,7 +14,7 @@ class EmailAddressParser
     new_email_list = []
     new_email_list = @emails.split(" ")
     if new_email_list.size == 1 
-      new_email_list = @emails.split(",")
+      new_email_list = @emails.split(", ")
     end
   
     new_email_list = new_email_list.uniq
