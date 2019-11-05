@@ -14,7 +14,9 @@ class EmailAddressParser
     new_email_list = []
     new_email_list = @emails.split(/[\s,]/)
     new_email_list.each do |email|
-      email.
+      email.tr(' ', '')
+      email.tr(',', '')
+    end
     new_email_list = new_email_list.uniq
     new_email_list
   end
