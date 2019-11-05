@@ -18,6 +18,8 @@ class EmailAddressParser
       email.tr(',', '')
     end
     new_email_list.delete_if do |email|
+      email == ""
+    end
       
     new_email_list = new_email_list.uniq
     new_email_list
