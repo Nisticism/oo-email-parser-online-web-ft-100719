@@ -17,7 +17,7 @@ class EmailAddressParser
       email.tr(' ', '')
       email.tr(',', '')
     end
-    if new_email_list.include?("")
+    new_email_list.delete_if do |email|
       
     new_email_list = new_email_list.uniq
     new_email_list
